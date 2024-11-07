@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estiloLogin.css">
+    <script type="text/javascript" src="js/validacaoLogin.js"></script>
     <title>Login - Controle de gastos</title>
 </head>
 <body>
@@ -12,17 +13,17 @@
             <div>
                 <label for="email">Email:</label>
             </div>
-            <input type="email" name="email" placeholder="seuemail@email.com">
+            <input type="email" name="email" id="email" onchange="validateFields()" placeholder="seuemail@email.com">
         </div>
         <div>
             <div><label for="senha">Senha:</label></div>
-            <input type="password" name="senha" placeholder="senha">
+            <input type="password" name="senha" id="senha" onchange="validateFields()" placeholder="senha">
         </div>
         <div>
-            <button type="button" class="clear">Recuperar Senha</button>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar Senha</button>
         </div>
         <div>
-            <button type="button" class="solid">Entrar</button>
+            <button type="button" class="solid" id="loginButton" disabled="true">Entrar</button>
         <div>
         <div>
             <button type="button" class="outline">Registrar</button>
